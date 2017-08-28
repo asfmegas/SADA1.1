@@ -1,8 +1,8 @@
 /*Autor: Alexsandro Façanha------------------------------------------ 24/08/2014*/
 /*Banco de dados do Sistema SADA V 1.1-----------------------------------------*/
-create database BDAnaliseAcad2;
+/* create database BDAnaliseAcad2; */
 
-use BDAnaliseAcad3;
+use BDAnaliseAcad2;
 
 create table tbaluno(
 	idalu int(8) not null primary key auto_increment, 
@@ -44,7 +44,7 @@ create table tbdisciplina(
 	observacao varchar(250)
 );
 
-create table tbCurDisc(
+create table tbcurdisc(
 	idcur int(8) not null,
 	iddisc int(8) not null,
 	foreign key (idcur) references tbcurso(idcur),
@@ -78,13 +78,13 @@ create table tbmovimento(
 DELIMITER $$
 DROP PROCEDURE IF EXISTS INSERIR_DISC2$$
 CREATE PROCEDURE INSERIR_DISC2 (
-	IDC INT(8),
-	IDD INT(8),
-	ESP VARCHAR(150),
-	NAT VARCHAR(100),
-	OBJ VARCHAR(150),
-	CARGA INT(4),
-	OBS VARCHAR(250))
+	idc INT(8),
+	ido INT(8),
+	esp VARCHAR(150),
+	nat VARCHAR(100),
+	obj VARCHAR(150),
+	carga INT(4),
+	obs VARCHAR(250))
 	main : BEGIN
 		insert into tbdisciplina (iddisc,especificacao,natureza,objetivo,carga_horaria,observacao) 
 		values (idd,esp,nat,obj,carga,obs);

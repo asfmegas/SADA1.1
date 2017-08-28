@@ -37,7 +37,7 @@ public class Conexao {
         String text = "Erro na conexão com o \nbanco de dados. Verifique\no 'Caps Lock'.";
         Connection con = null;
         try{
-            con = DriverManager.getConnection("jdbc:mysql://localhost/BDAnaliseAcad", usuario, senha);
+            con = DriverManager.getConnection("jdbc:mysql://localhost/BDAnaliseAcad2", usuario, senha);
             text = "Conexão realizada com sucesso!";
             return text;
         }catch(SQLException e){

@@ -21,7 +21,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {      
         initComponents();
-        setTitle("SADA V 1.1 - Sistema de Análise de Desempenho Acadêmico");
+        setTitle("SADA V 1.1");
         //setSize(700,500);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -43,8 +43,8 @@ public class Principal extends javax.swing.JFrame {
         jbEstudante = new javax.swing.JButton();
         jbDisciplina = new javax.swing.JButton();
         jbCurso = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmEstudante = new javax.swing.JMenuItem();
@@ -142,6 +142,10 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.add(jbCurso);
         jbCurso.setBounds(40, 130, 250, 93);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundSada_1.jpg"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(-20, -20, 520, 390);
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/SADAV11.png"))); // NOI18N
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -151,11 +155,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(300, 30, 160, 80);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/fundSada_1.jpg"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 500, 350);
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 500, 350));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 360));
 
         jMenu1.setText("CADASTRO");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -270,7 +270,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCursoActionPerformed
 
     private void jmMovimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmMovimentoActionPerformed
-        CadastroMovGUI gui = new CadastroMovGUI();
+        MovimentoGUI gui = new MovimentoGUI();
         gui.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jmMovimentoActionPerformed
